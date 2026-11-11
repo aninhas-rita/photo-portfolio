@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+.env*.local
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+
+# Content and uploads now live in Vercel Blob, not on disk — nothing local
+# to ignore here anymore.

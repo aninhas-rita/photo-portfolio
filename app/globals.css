@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f6f2e9;
+  color: #4b342c;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Fluid display type scale — clamps rather than jumping at breakpoints */
+.text-fluid-hero {
+  font-size: clamp(2.75rem, 6vw + 1rem, 7rem);
+  line-height: 0.98;
+}
+
+.text-fluid-h2 {
+  font-size: clamp(1.9rem, 2.6vw + 1rem, 3.25rem);
+  line-height: 1.05;
+}
+
+/* Visible keyboard focus everywhere, instead of removing the outline */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #9c7164;
+  outline-offset: 3px;
+}
